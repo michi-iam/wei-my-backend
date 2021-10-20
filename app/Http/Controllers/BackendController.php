@@ -78,21 +78,29 @@ class BackendController extends Controller
         $post = Post::where("id", $post_id)->first();
         return view("backend.components.forms.edit.post", ["post"=>$post, "categories" => Category::all()]);
     }
-
+ 
 
     public function update_post(Request $req){
         $post_id = $req->post_id;
         $post = new Post();
         $post->update_post($req, $post_id);
-        return redirect()->action([BackendController::class, 'index']);
-
+        //return redirect()->action([BackendController::class, 'index']);
+        return "geändert";
     }
+
+    
+
+
+    
+
+
+
     public function toggle_post_active(Request $req){
         $post_id = $req->post_id;
         $post = new Post();
-        $post->toggle_post_active($post_id);
-        return redirect()->action([BackendController::class, 'index']);
-
+        $post = $post->toggle_post_active($post_id);
+        //return redirect()->action([BackendController::class, 'index']);
+        return $post->active;
     }
     public function delete_post(Request $req){
         $post_id = $req->post_id;
@@ -172,6 +180,7 @@ class BackendController extends Controller
         $category = Category::where("id", $category_id)->first();
         $post->category_id = $category->id;
         $post->save();
-        return redirect()->action([BackendController::class, 'index']);
+        //return redirect()->action([BackendController::class, 'index']);
+        return "geändert!";
     }
 }

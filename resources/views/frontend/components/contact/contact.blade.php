@@ -6,7 +6,7 @@
             <h4>{{ $post->subtitle }}</h4>
         </div>
         <div class="mt-3 row lh-lg fw-bold fs-4">
-            <p>{{ $post->text }}</p>
+            <p style="white-space: pre-line">{{ $post->text }}</p>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">

@@ -5,7 +5,7 @@
     @endforeach
     <h2 class="mt-4 bg-warning rounded shadow text-primary p-5">{{ $post->title }}</h2>
     <h4 class="p-5 ms-lg-3 text-muted pb-2">{{ $post->subtitle }}</h4>
-    <p>
+    <p style="white-space: pre-line">
         {{ $post->text }}
     </p>
   

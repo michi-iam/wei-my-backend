@@ -35,7 +35,7 @@
                 </div>
                
                 <div class="row text-start mt-2">
-                    <p class="lh-lg">{{ $post->text }}</p>
+                    <p class="lh-lg" style="white-space: pre-line">{{ $post->text }}</p>
                 </div>
             </div>
         </div>

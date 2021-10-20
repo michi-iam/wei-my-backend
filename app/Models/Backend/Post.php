@@ -60,13 +60,13 @@ class Post extends Model
     public function toggle_post_active($post_id)
     {
         $post = Post::where("id", $post_id)->first();
-        Log::info($post->active);
+      
         if($post->active === false){
-            Log::info("war 0");
+        
             $post->active = true;
         }
         else {
-            Log::info("war 1");
+       
             $post->active = false;
         }
         $post->save();

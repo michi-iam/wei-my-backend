@@ -21,8 +21,8 @@ class NavbarComponent extends Component
         $cs = [];
         foreach($categories as $c){
             if(Post::where("category_id", $c->id)->exists()){
-                $ps = Post::where("category_id", $c->id)->get();
-                if($ps){
+                $ps = Post::where("category_id", $c->id)->where("active", 1)->get();
+                if(count($ps) > 0){
                     $obj = [
                         "category" => $c->name,
                         "posts" => $ps, 

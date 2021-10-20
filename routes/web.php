@@ -57,5 +57,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     
     
     Route::post("/update_post_category", [BackendController::class, "update_post_category"])->name("update_post_category");
-
+ 
 });
