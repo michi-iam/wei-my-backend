@@ -2,13 +2,13 @@
     <div class="row">
       <form id="postEditForm" method="POST">
         @csrf
-        <input type="hidden" value="{{ $post->id }}" name="post_id" id="id_post_id">
+        <input type="hidden" value="{{ $post->id }}" name="post_id" id="posteditform_post_id">
         <label class="form-label" for="id_title">Titel</label>
-        <input value="{{ $post->title }}" class="form-control" type="text" id="id_title" name="post_title">
+        <input value="{{ $post->title }}" class="form-control" type="text" id="posteditform_id_title" name="post_title">
         <label class="form-label" for="id_subtitle">Untertitel</label>
-        <input value="{{ $post->subtitle }}" class="form-control" type="text" id="id_subtitle" name="post_subtitle">
+        <input value="{{ $post->subtitle }}" class="form-control" type="text" id="posteditform_id_subtitle" name="post_subtitle">
         <label class="form-label" for="id_text">Text</label>
-        <textarea value="{{ $post->text }}" class="form-control" type="text" id="id_text" name="post_text">{{ $post->text }}</textarea>
+        <textarea value="{{ $post->text }}" class="form-control" type="text" id="posteditform_id_text" name="post_text">{{ $post->text }}</textarea>
         <button id="postEditFormBtn" class="btn btn-success mt-2" type="submit">ändern</button>
       </form>
     </div>
@@ -145,10 +145,10 @@
       e.preventDefault();
       e.stopPropagation();
       e.stopImmediatePropagation();
-      var post_id = $('#id_post_id').val();
-      var post_title = $('#id_title').val();
-      var post_subtitle = $('#id_subtitle').val();
-      var post_text = $('#id_text').val();
+      var post_id = $('#posteditform_post_id').val();
+      var post_title = $('#posteditform_id_title').val();
+      var post_subtitle = $('#posteditform_id_subtitle').val();
+      var post_text = $('#posteditform_id_text').val();
     
           $.ajax({
               url: "update_post",
