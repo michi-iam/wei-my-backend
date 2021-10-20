@@ -34,9 +34,9 @@ Route::get("/meinlogout", [BackendController::class, "meinlogout"])->name("meinl
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    Route::get("", [FrontendController::class, "index"]);
+    Route::get("", [FrontendController::class, "index"])->name("index");
 
-    Route::get('/dashboard', [BackendController::class, "index"]);
+    Route::get('/dashboard', [BackendController::class, "index"])->name("dashboard");
 
     Route::post("/add_new_post", [BackendController::class, "add_new_post"])->name("add_new_post");
     Route::post("/add_new_image", [BackendController::class, "add_new_image"])->name("add_new_image");

@@ -1,7 +1,7 @@
 <div class="container mt-2 p-3 bg-dark bg-gradient shadow text-light rounded">
     @foreach($businesshours as $bh)
     @if($loop->first)
-    <div class="row text-center">
+    <div id="post{{ $bh->post->id }}" class="row text-center">
         <h2>{{ $bh->post->title }}</h2>
         <h4>{{ $bh->post->subtitle }}</h4>
     </div>

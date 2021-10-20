@@ -1,7 +1,7 @@
 <div>
     @foreach($news as $n)
     @foreach($n->posts->sortByDesc("updated_at") as $post)
-        <div class="container mt-2 bg-info p-3 rounded shadow-lg font-monospace">
+        <div id="post{{ $post->id }}" class="container mt-2 bg-info p-3 rounded shadow-lg font-monospace">
             <div class="row justify-content-center text-center ">
                 <div class="row">
                     <h2>{{ $post->title }}</h2>

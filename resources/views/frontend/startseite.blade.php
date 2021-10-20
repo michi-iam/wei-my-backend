@@ -6,7 +6,7 @@
 
 <div class="container p-4">
     <div class="row">
-        <h1>Startseite Frontend</h1>
+        <h1>Besucher</h1>
     </div>
     <div class="row mt-5 justify-content-center">
         @isset($news)

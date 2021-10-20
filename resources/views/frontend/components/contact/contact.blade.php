@@ -1,6 +1,6 @@
 @foreach($contacts as $c)
 @foreach($c->posts as $post)
-    <div class="container mt-2 bg-dark bg-gradient shadow-lg p-3 text-light rounded">
+    <div id="post{{ $post->id }}" class="container mt-2 bg-dark bg-gradient shadow-lg p-3 text-light rounded">
         <div class="row">
             <h2 class="text-center text-info text-decoration-underline font-monospace fw-bolder">{{ $post->title }}</h2>
             <h4>{{ $post->subtitle }}</h4>
