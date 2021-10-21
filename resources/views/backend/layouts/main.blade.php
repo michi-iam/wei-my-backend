@@ -13,7 +13,9 @@
     
 </head>
 <body class="bg-secondary bg-gradient">
+    @unless(Request::path() === 'login')
         <x-navbar-component></x-navbar-component>
+    @endunless
         <div id="main" class="container ">
             
             @yield('content')
