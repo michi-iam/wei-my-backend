@@ -1,12 +1,50 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$mein-green: rgb(22,99,111);
+$mein-rot: rgb(104, 6, 16);
+$mein-blau: rgb(3, 13, 85);
+$mein-gelb: rgb(240, 255, 174);
+// plot
+
+
+
+    // Custom the bootstrap theme color (ex: alert-custom-color)
+$custom-theme-colors: (
+    "visitor": rgb(103, 252, 103),
+    "admin": rgb(146, 0, 0),
+    "navbarColor": rgb(0, 157, 168),
+    "info": rgb(67, 177, 250),
+    "success": rgb(30, 247, 138),
+    "warning":rgb(156, 238, 220),
+    "secondary": rgb(121, 124, 124),
+    "dark": rgb(21, 0, 48),
+
+    );
+    
+// Custom the bootstrap utilities color (ex: text-custom-color or bg-custom-color)
+$custom-utilities-colors: $custom-theme-colors;
+
+// Custom the bootstrap table color (ex: table-custom-color)
+$custom-table-colors: $custom-theme-colors;
+
+// Merge the custom colors to the bootstrap default
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$utilities-text-colors: map-merge($utilities-text-colors, $custom-utilities-colors );
+$utilities-bg-colors: map-merge($utilities-bg-colors, $custom-utilities-colors);
+$table-variants: map-merge($table-variants, $custom-table-colors);
+
+
 // Body
-$body-bg: #f8fafc;
+// $body-bg: #f8fafc;
+$body-bg: #aed1f5;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-// Colors
+//Colors
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
